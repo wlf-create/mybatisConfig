@@ -1,0 +1,19 @@
+server:
+  port: 4040
+spring:
+  datasource:
+    url: jdbc:mysql://10.13.1.136:3306/navigationdb?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: platQA#123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      auto-commit: true
+      minimum-idle: 2
+      idle-timeout: 60000
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      pool-name: DatebookHikariCP
+      maximum-pool-size: 5
+mybatis:
+  type-aliases-package: org.wlf.entity
